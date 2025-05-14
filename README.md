@@ -1,80 +1,122 @@
 # IMADASSIGNMENT2
-# 📚 Flashcard Quiz App (Kotlin)
+# 📚 Kotlin Flashcard Quiz App
 
-Hey! This is a simple Android app made using **Kotlin** and **Android Studio**. It's meant to help users (like students or anyone studying) practice using flashcards. The app has 5 questions that are True/False and gives you a score at the end based on how well you did.
+## 🎯 Overview
 
-## 🚀 What it does
+This is a native Android application developed in Kotlin using Android Studio. The app is designed as an interactive flashcard quiz tool to help users study history through True/False questions. It presents five questions, scores the user's answers, gives instant feedback, and provides a summary at the end.
 
-Basically, it runs a short quiz with 5 questions. You answer each one (by tapping True or False), then it tells you if you're right or wrong. After all 5 questions are done, you'll see your score and some feedback. You can also go back and review the answers if you want.
+---
 
-## 🖼️ Screens in the App
+## 🧠 Features
 
-### 🏁 Welcome Screen:
-- A short welcome message.
-- A button that says **Start** which takes you into the quiz.
+- **Welcome Screen**
+  - Displays a short description and a welcome message.
+  - Includes a "Start" button to begin the quiz.
 
-### ❓ Flashcard Question Screen:
-- One question at a time.
-- Two answer buttons: **True** and **False**.
-- Feedback after you answer (like "Correct!" or "Nope, that's wrong").
-- A **Next** button to move to the next question.
+  - ![welcome screen](https://github.com/user-attachments/assets/93cb7381-412d-48b2-ae4e-ba67650b2d56)
 
-### 🏆 Score Screen:
-- Shows your total score (out of 5).
-- Gives you some feedback:
-  - "Great job!" if you get 3 or more.
-  - "Keep practising!" if less than 3.
-- A **Review** button so you can look at the questions and the right answers.
-- An **Exit** button to close the app.
 
-## 🔧 How it works
 
-We use 2 arrays:
-- One has all the questions (5 of them).
-- The other one has the correct answers (true or false).
+- **Flashcard Question Screen**
+  - Presents one True/False question at a time.
+  - Provides immediate feedback after answering.
+  - "Next" button to continue through the quiz.
 
-The app loops through each question when you tap **Next**. It checks your answer, shows feedback, and adds to your score if you're right.
+  - ![image](https://github.com/user-attachments/assets/fb0b0b5b-6d65-48b2-acf3-597cee1fa242)
 
-After the last question, it jumps to the Score Screen.
 
-## 💻 Stuff Used
+- **Score Screen**
+  - Shows total number of correct answers.
+  - Displays personalized feedback based on performance.
+  - Offers a "Review" button to go over all questions and correct answers.
+  - Exit button closes the app.
+  - 
 
-- Kotlin  
-- Android Studio  
-- GitHub (for version control)  
-- GitHub Actions (to do builds/checks automatically)
+---
 
-## 🧪 GitHub Actions
+## 🛠️ Application Logic
 
-Set up to:
-- Check if the code builds
-- Do some basic testing
-- Helps make sure you didn’t break stuff without realizing it 😅
+- Two **parallel arrays** are used: one for questions and one for the correct answers.
+- A **score counter** is initialized to zero.
+- A **loop** runs through all five questions.
+  - For each question:
+    - The user selects "True" or "False."
+    - The app displays “Correct!” or “Incorrect.”
+    - Score is updated accordingly.
+- After the final question:
+  - The Score Screen appears with total marks and feedback.
+  - If the user scores 3 or more, they see “Great job!”
+  - If under 3, the message reads “Keep practising!”
 
-## 📝 Example Questions
+---
 
-1. "Nelson Mandela was the president in 1994" – True  
-2. "The capital of South Africa is Johannesburg" – False  
-3. "The human body has four lungs" – False  
-4. "The sun rises in the East" – True  
-5. "There are 26 letters in the English alphabet" – True
+## 🚀 Tech Stack
 
-## 🧠 Notes
+- **Language:** Kotlin
+- **IDE:** Android Studio
+- **Version Control:** Git and GitHub
+- **CI/CD:** GitHub Actions
 
-- Code is commented so it's easy to follow if you're new to Android or Kotlin.
-- Nothing too crazy here – just a clean, functional flashcard app for practice.
+---
 
-## 🧍‍♂️ Author
+## 📂 Folder Structure
 
-Made as part of coursework at **The Independent Institute of Education (Pty) Ltd**, 2025. If you're reading this and using it for inspo, good luck! 🚀
 
-## 📜 License
+📁 FlashcardQuizApp/
+├── 📁 app/
+│ └── 📁 src/
+│ └── 📁 main/
+│ ├── AndroidManifest.xml
+│ ├── 📁 java/
+│ │ └── com.example.flashcardquiz/
+│ │ ├── MainActivity.kt
+│ │ ├── QuestionActivity.kt
+│ │ └── ScoreActivity.kt
+│ └── 📁 res/
+│ ├── layout/
+│ ├── drawable/
+│ └── values/
+└── .github/
+└── workflows/
+└── android.yml
 
-This project is just for learning purposes. Please don't use it for commercial stuff.
+## ✅ How to Run the App
 
-Reference list
-RixileNdlovu (2025) Flashcard Quiz App [README file]. The Independent Institute of Education. Available at: https://github.com/your-username/flashcard-kotlin-app (Accessed: 29 April 2025).
-rashCourse (2015) The Nervous System: CrashCourse Biology #26. YouTube video, added by CrashCourse [Online]. Available at: https://www.youtube.com/watch?v=qPix_X-9t7E (Accessed: 29 April 2025).
+1. Clone the repository:
+2. Open the project in **Android Studio**.
+3. Connect an Android device or emulator.
+4. Click **Run**.
+   
+## ⚙️ GitHub Actions
+
+A CI workflow using **GitHub Actions** has been added to:
+- Build the project on each commit.
+- Ensure code compiles and passes basic checks.
+
+Workflow file: `.github/workflows/android.yml`
+
+## 📘 References
+
+1. [Android Developers Documentation – Kotlin](https://developer.android.com/kotlin)
+2. [Android Jetpack Components](https://developer.android.com/jetpack)
+3. [GitHub Actions for Android](https://docs.github.com/en/actions/guides/building-and-testing-android)
+4. [Material Design Guidelines](https://m3.material.io/)
+5. YouTube video, added by CrashCourse [Online]. Available at: https://www.youtube.com/watch?v=qPix_X-9t7E (Accessed: 29 April 2025).
+6. The Independent Institute of Education. Available at: https://github.com/your-username/flashcard-kotlin-app (Accessed: 29 April 2025).
+rashCourse (2015) The Nervous System: CrashCourse Biology
+
+## 👤 Author
+
+Developed by: Rixile Ndlovu  
+Student ID: ST10478025  
+Institution: Rosebank College
+
+## 📄 License
+
+This project is for educational purposes and not intended for commercial use. No license is applied.
+
+
+
 
 
 
