@@ -48,7 +48,6 @@ This is a native Android application developed in Kotlin using Android Studio. T
   - If the user scores 3 or more, they see “Great job!”
   - If under 3, the message reads “Keep practising!”
 
----
 
 ## 🚀 Tech Stack
 
